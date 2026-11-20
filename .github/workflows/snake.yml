@@ -1,0 +1,36 @@
+# Genera la serpiente neón que se come el gráfico de contribuciones
+# y la publica en la rama `output` (la que lee el README).
+name: Serpiente neón
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # cada 12 horas
+  workflow_dispatch:          # botón "Run workflow" en la pestaña Actions
+  push:
+    branches: [main]
+    paths: [".github/workflows/snake.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generar SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?color_snake=#FF2E88&color_dots=#1E0A3C,#6A2C91,#FF2E88,#FF8A3D,#FFC857&color_dot_border=#12002B
+            dist/snake-light.svg?color_snake=#6A2C91&color_dots=#F3E8F7,#FFC857,#FF8A3D,#FF2E88,#6A2C91&color_dot_border=#FFFFFF
+
+      - name: Publicar en la rama output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore(snake): actualizar animación"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

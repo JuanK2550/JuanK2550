@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="t d">
+  <title id="t">Juan Camilo Calderón — Full Stack Developer</title>
+  <desc id="d">Atardecer synthwave con sol retro, palmeras y cuadrícula neón en movimiento.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D0221"/>
+      <stop offset="0.35" stop-color="#2A0845"/>
+      <stop offset="0.62" stop-color="#6A2C91"/>
+      <stop offset="0.82" stop-color="#FF2E88"/>
+      <stop offset="1" stop-color="#FF8A3D"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFC857"/>
+      <stop offset="0.5" stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#FF2E88"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12002B"/>
+      <stop offset="1" stop-color="#0D0221"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFC857"/>
+      <stop offset="0.5" stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#FF2E88"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="sunStripes">
+      <rect x="0" y="0" width="1200" height="380" fill="#fff"/>
+      <rect x="0" y="198" width="1200" height="4" fill="#000"/>
+      <rect x="0" y="210" width="1200" height="6" fill="#000"/>
+      <rect x="0" y="224" width="1200" height="8" fill="#000"/>
+      <rect x="0" y="240" width="1200" height="10" fill="#000"/>
+      <rect x="0" y="258" width="1200" height="12" fill="#000"/>
+    </mask>
+    <mask id="gridFade"><rect x="0" y="262" width="1200" height="118" fill="url(#fade)"/></mask>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sunGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <g id="palm">
+      <path d="M0 0 C 6 -40, 2 -90, 18 -150" fill="none" stroke="#0D0221" stroke-width="9" stroke-linecap="round"/>
+      <g transform="translate(18 -150)" fill="#0D0221">
+        <path d="M0 0 C 30 -22, 70 -18, 96 8 C 66 -6, 34 -6, 0 0Z"/>
+        <path d="M0 0 C -30 -22, -70 -18, -96 8 C -66 -6, -34 -6, 0 0Z"/>
+        <path d="M0 0 C 22 -36, 52 -50, 82 -42 C 54 -34, 28 -20, 0 0Z"/>
+        <path d="M0 0 C -22 -36, -52 -50, -82 -42 C -54 -34, -28 -20, 0 0Z"/>
+        <path d="M0 0 C 30 6, 58 26, 70 56 C 50 34, 28 18, 0 0Z"/>
+        <path d="M0 0 C -30 6, -58 26, -70 56 C -50 34, -28 18, 0 0Z"/>
+        <path d="M0 0 C 4 -30, 14 -52, 26 -66 C 18 -46, 10 -24, 0 0Z"/>
+      </g>
+    </g>
+  </defs>
+  <style>
+    .stars circle { fill: #fff; animation: tw 4s ease-in-out infinite; }
+    .stars circle:nth-child(2n) { animation-delay: -1.3s; }
+    .stars circle:nth-child(3n) { animation-delay: -2.6s; }
+    @keyframes tw { 0%,100% { opacity: .2 } 50% { opacity: .9 } }
+    .halo { animation: pulse 6s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .55 } 50% { opacity: .9 } }
+    .rows { animation: roll 2.4s linear infinite; }
+    @keyframes roll { from { transform: translateY(0) } to { transform: translateY(16px) } }
+    .sway { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; }
+    .sway.b { animation-duration: 9s; animation-delay: -3s; }
+    @keyframes sway { 0%,100% { transform: rotate(-1.5deg) } 50% { transform: rotate(1.5deg) } }
+    .name { font: italic 900 62px 'Arial Black', 'Segoe UI Black', Impact, sans-serif; letter-spacing: 1px; }
+    .role { font: 600 18px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 6px; }
+    .flicker { animation: flick 8s linear infinite; }
+    @keyframes flick { 0%,92%,100% { opacity: 1 } 93% { opacity: .55 } 94% { opacity: 1 } 96% { opacity: .7 } 97% { opacity: 1 } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <rect width="1200" height="380" fill="url(#sky)"/>
+
+  <g class="stars">
+    <circle cx="80" cy="40" r="1.4"/><circle cx="190" cy="90" r="1"/><circle cx="300" cy="30" r="1.6"/>
+    <circle cx="420" cy="70" r="1"/><circle cx="540" cy="22" r="1.2"/><circle cx="660" cy="60" r="1"/>
+    <circle cx="760" cy="28" r="1.5"/><circle cx="880" cy="84" r="1"/><circle cx="980" cy="36" r="1.3"/>
+    <circle cx="1100" cy="70" r="1.1"/><circle cx="1150" cy="24" r="1.5"/><circle cx="40" cy="120" r="1"/>
+  </g>
+
+  <!-- sol retro -->
+  <circle class="halo" cx="600" cy="256" r="112" fill="#FF2E88" filter="url(#sunGlow)"/>
+  <circle cx="600" cy="256" r="104" fill="url(#sun)" mask="url(#sunStripes)"/>
+
+  <!-- horizonte y suelo -->
+  <rect x="0" y="262" width="1200" height="118" fill="url(#ground)"/>
+  <line x1="0" y1="262" x2="1200" y2="262" stroke="#FF2E88" stroke-width="2" filter="url(#glow)"/>
+  <g mask="url(#gridFade)" stroke="#FF2E88" stroke-opacity="0.75" stroke-width="1.2">
+    <g class="rows">
+      <line x1="0" y1="262" x2="1200" y2="262"/><line x1="0" y1="278" x2="1200" y2="278"/>
+      <line x1="0" y1="294" x2="1200" y2="294"/><line x1="0" y1="310" x2="1200" y2="310"/>
+      <line x1="0" y1="326" x2="1200" y2="326"/><line x1="0" y1="342" x2="1200" y2="342"/>
+      <line x1="0" y1="358" x2="1200" y2="358"/><line x1="0" y1="374" x2="1200" y2="374"/>
+    </g>
+    <path d="M600 262 L600 380 M600 262 L480 380 M600 262 L360 380 M600 262 L240 380 M600 262 L120 380 M600 262 L0 380 M600 262 L-150 380 M600 262 L-320 380 M600 262 L720 380 M600 262 L840 380 M600 262 L960 380 M600 262 L1080 380 M600 262 L1200 380 M600 262 L1350 380 M600 262 L1520 380"/>
+  </g>
+
+  <!-- palmeras -->
+  <g transform="translate(110 264)"><g class="sway"><use href="#palm"/></g></g>
+  <g transform="translate(205 266) scale(0.72)"><g class="sway b"><use href="#palm"/></g></g>
+  <g transform="translate(1090 264) scale(-1 1)"><g class="sway b"><use href="#palm"/></g></g>
+  <g transform="translate(990 266) scale(-0.7 0.7)"><g class="sway"><use href="#palm"/></g></g>
+
+  <!-- texto -->
+  <g text-anchor="middle" transform="translate(0 0)">
+    <text class="name flicker" x="600" y="96" transform="skewX(-6) translate(10 0)" fill="#FF2E88" filter="url(#glow)" opacity="0.85">JUAN CAMILO CALDERÓN</text>
+    <text class="name" x="600" y="96" transform="skewX(-6) translate(10 0)" fill="url(#title)">JUAN CAMILO CALDERÓN</text>
+    <text class="role" x="600" y="134" fill="#00C2C7">FULL STACK DEVELOPER · INGENIERÍA DE SISTEMAS</text>
+  </g>
+</svg>

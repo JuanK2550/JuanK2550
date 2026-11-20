@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 170" width="1200" height="170" role="img" aria-label="Gracias por pasar">
+  <defs>
+    <linearGradient id="w1" x1="0" x2="1">
+      <stop offset="0" stop-color="#FF2E88"/><stop offset="0.5" stop-color="#FF8A3D"/><stop offset="1" stop-color="#6A2C91"/>
+    </linearGradient>
+    <linearGradient id="w2" x1="0" x2="1">
+      <stop offset="0" stop-color="#6A2C91"/><stop offset="0.5" stop-color="#FF2E88"/><stop offset="1" stop-color="#FF8A3D"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .a { animation: slide 14s linear infinite; }
+    .b { animation: slide 9s linear infinite reverse; }
+    @keyframes slide { from { transform: translateX(0) } to { transform: translateX(-1200px) } }
+    .t { font: 700 20px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 6px; fill: #FFF3D6; }
+    @media (prefers-reduced-motion: reduce) { .a, .b { animation: none } }
+  </style>
+  <g class="a" opacity="0.55">
+    <path fill="url(#w2)" d="M0 70 C150 30 300 110 450 70 S750 30 900 70 S1050 110 1200 70 C1350 30 1500 110 1650 70 S1950 30 2100 70 S2250 110 2400 70 V170 H0Z"/>
+  </g>
+  <g class="b">
+    <path fill="url(#w1)" d="M0 95 C200 60 400 130 600 95 S1000 60 1200 95 C1400 60 1600 130 1800 95 S2200 60 2400 95 V170 H0Z"/>
+  </g>
+  <text class="t" x="600" y="148" text-anchor="middle">GRACIAS POR PASAR · STAY NEON</text>
+</svg>

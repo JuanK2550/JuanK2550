@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 96" width="1200" height="96" role="img" aria-label="PROYECTOS">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#FF2E88"/><stop offset="0.6" stop-color="#FF5A5F"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient>
+    <linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#FF2E88"/><stop offset="0.5" stop-color="#6A2C91"/><stop offset="1" stop-color="#6A2C91" stop-opacity="0"/></linearGradient>
+    <filter id="glow" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <style>
+    .t { font: italic 900 46px 'Arial Black', 'Segoe UI Black', Impact, sans-serif; letter-spacing: 1px; }
+    .n { font: 700 15px 'Segoe UI', Arial, sans-serif; letter-spacing: 5px; fill: #00C2C7; }
+    .glow { animation: pulse 5s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .35 } 50% { opacity: .7 } }
+    @media (prefers-reduced-motion: reduce) { .glow { animation: none } }
+  </style>
+  <text class="n" x="4" y="22">03 //</text>
+  <text class="t glow" x="4" y="70" fill="#FF2E88" filter="url(#glow)" transform="skewX(-6)">PROYECTOS</text>
+  <text class="t" x="4" y="70" fill="url(#g)" transform="skewX(-6)">PROYECTOS</text>
+  <rect x="4" y="84" width="1196" height="3" rx="1.5" fill="url(#l)"/>
+</svg>
